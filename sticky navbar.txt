@@ -1,0 +1,76 @@
+
+
+html==>
+<header>
+            <a href="#" class="logo">Hannan</a>
+            <ul class="container">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">PORTFOLIO</a></li>
+                <li><a href="#">BLOG</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+</header>
+
+
+css==>
+
+header{
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    transition: 0.6s !important;
+    z-index: 100000 !important;
+}
+header .logo{
+    position: relative !important;
+    font-weight: 700 !important;
+    color: #fff !important;
+    text-decoration: none !important;
+    font-size: 2em !important;
+    letter-spacing: 2px !important;
+    transition: 0.6s !important;
+}
+header ul{
+    position: relative !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+header ul li{
+    position: relative !important;
+    list-style: none !important;
+}
+header ul li a{
+    position: relative !important;
+    margin: 0px 15px !important;
+    text-decoration: none !important;
+    color: #fff !important;
+    letter-spacing: 2px !important;
+    font-weight: 500 !important;
+    transition: .5s !important;
+} 
+
+header.sticky{
+    padding: 5px 100px !important;
+    background: #fff !important;
+}
+header.sticky .logo,
+header.sticky ul li a{
+    color: #000;
+}
+
+
+
+javascript==>
+
+
+
+<script>
+    window.addEventListener("scroll", function(){
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0)
+    }) 
+    </script>
